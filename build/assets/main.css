@@ -1,0 +1,239 @@
+body {
+  color: #776e65;
+  background-color: #faf8ef;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif; }
+
+.container, 
+.game-info_foot {
+  width: 510px;
+  margin: 0 auto; }
+
+.container {
+  height: 660px; }
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+  display: block;
+  float: left; }
+
+.scores-container {
+    float: right;
+    text-align: right; }
+
+.current-score {
+  position: relative;
+  display: inline-block;
+  background: #bbada0;
+  padding: 15px 25px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center; }
+
+.current-score:after {
+  content: "Score"; }
+
+.best-score {
+  position: relative;
+  display: inline-block;
+  background: #bbada0;
+  padding: 15px 25px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  margin-left: 10px;
+  text-align: center; }
+
+.best-score:after {
+    content: "Best";
+}
+
+.current-score:after, .best-score:after {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: #eee4da; }
+
+.heading:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.game-info {
+  float: left;
+  line-height: 8px; }
+
+.brown-button,
+.green-button {
+  background: #8f7a66;
+  border-radius: 3px;
+  padding: 0 20px;
+  margin-left: 10px;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #f9f6f2;
+  height: 40px;
+  line-height: 42px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  float: right;
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; }
+
+.green-button {
+  background: #0bab35;
+}
+
+.grid-container { 
+  display: flex;
+  position: absolute;
+  top: 149px;
+  width: 59%;
+  max-height: 122px; }
+
+.grid {
+  width: 492px;
+  height: 480px;
+  background-color: #BBADA0;
+  border-radius: 6px;
+  padding: 9px; }
+
+.row {
+  display: flex; }
+
+.game-over {
+  position: absolute;
+  font-size: 100px;
+  width: 600px;
+  height: 600px;
+  background-color: red;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: #BBADA0;
+  opacity: 0.8;
+  color: #FFFFFF; }
+
+.tile {
+  border-radius: 3px;
+  height: 109px;
+  width: 111px;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 62px;
+  font-weight: 600;
+  user-select: none; }
+
+.tile-0 {
+  color: transparent;
+  background-color: #CDC1B4; }
+
+.tile-2 {
+  color: #776E65;
+  background-color: #EEE4DA; }
+
+.tile-4 {
+  color: #776E65;
+  background-color: #EDE0C8; }
+
+.tile-8 {
+  color: #F9F6F2;
+  background-color: #F2B179; }
+
+.tile-16 {
+  color: #F9F6F2;
+  background-color: #F59563; }
+
+.tile-32 {
+  color: #F9F6F2;
+  background-color: #F67C5F; }
+
+.tile-64 {
+  color: #f9f6f2;
+  background: #f65e3b; }
+
+.tile-128 {
+  color: #f9f6f2;
+  background: #edcf72; }
+
+.tile-256 {
+  color: #F9F6F2;
+  background-color: #EDCC61; }
+
+.tile-512 {
+  color: #f9f6f2;
+  background: #edc850; }
+
+.tile-1024 {
+  color: #f9f6f2;
+  background: #edc53f;
+  font-size: 45px; }
+
+.tile-2048 {
+  color: #f9f6f2;
+  background: #edc22e;
+  font-size: 45px; }
+
+.game-details {
+  width: 492px;
+  margin: 0 auto; }
+
+.game-details p {
+  line-height: 20px;
+  margin: 20px auto; }
+
+strong.important {
+  text-transform: uppercase; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #d8d4d0;
+  margin-top: 20px;
+  margin-bottom: 30px; }
+
+.overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 480px;
+  height: 472px;
+  background-color: rgba(238, 228, 218, 0.73);
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center; }
+
+.game-over {
+  position: absolute;
+  top: 68px;
+  left: 61px;
+  width: 480px;
+  height: 472px;
+  background: transparent;
+  font-size: 60px;
+  color: #8f7a66;
+  transform: matrix(1, 0, 0, 1, -60.5, -68.5) }
+
+.win {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  color: #8f7a66;
+  transform: matrix(1, 0, 0, 1, 176.5, 194.5); }
