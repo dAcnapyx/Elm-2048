@@ -1,2 +1,4 @@
 assets/* linguist-vendored
 build/* linguist-vendored
+index.html  linguist-vendored
+main.js  linguist-vendored
