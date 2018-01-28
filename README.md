@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elm clone of 2048</title>
+    <meta name="description" content="Elm implementation of game 2048"/>
+    <meta name="author" content="Asparuh Kostadinov"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <div class="game-info_foot">
+      <p class="game-explanation">
+        <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      </p>
+      <hr>
+      <p>
+        This is a clone of <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli's</a> game <a href="https://gabrielecirulli.github.io/2048/">2048</a>
+      </p>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      var node = document.getElementById('main');
+      var app = Elm.Main.embed(node);
 
-You can use the [editor on GitHub](https://github.com/dAcnapyx/Elm-2048/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+      var ar=new Array(37,38,39,40);
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dAcnapyx/Elm-2048/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+      $(document).keydown(function(e) {
+           var key = e.which;
+            if($.inArray(key,ar) > -1) {
+                e.preventDefault();
+                return false;
+            }
+            return true;
+      });
+  </script>
+  </body>
+</html>
